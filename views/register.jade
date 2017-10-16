@@ -1,0 +1,65 @@
+extends loginlayout
+
+block content
+  .js
+    #preloader
+    
+    nav
+    
+      ul 
+        
+       
+        li
+          a(href='/auth/login') 
+            strong Log In
+        li
+          a(href='/auth/register') 
+            strong Register
+
+    .content
+             form(role='form' action='/auth/register' method='post')
+                img.image-logo(src='/images/logo.png')
+                .group.w3-center
+                  if (error)
+                      strong.w3-text-red #{error}
+                .group
+                .group
+                  input(type='text' name='username')
+                  span.highlight
+                  span.bar
+                  label Username
+                .group
+                  input#password(type='password' name='password')
+                  span.highlight
+                  span.bar
+                  label Password
+                .group
+                  input(type='text' name='email')
+                  span.highlight
+                  span.bar
+                  label Email
+                .group
+                  input(type='text' name='fb')
+                  span.highlight
+                  span.bar
+                  label Facebook Page
+                .group
+                  input(type='text' name='contact')
+                  span.highlight
+                  span.bar
+                  label Contact No.
+                .group
+                  input(type='text' name='school')
+                  span.highlight
+                  span.bar
+                  label School / Company
+                .group
+                  input(type='text' name='photo')
+                  span.highlight
+                  span.bar
+                  label Profile Picture Link
+                button.button.buttonBlue(type='submit' onclick='return val();')
+                  | Register
+                  .ripples.buttonRipples
+                    span.ripplesCircle
+

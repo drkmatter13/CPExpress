@@ -1,0 +1,139 @@
+extends layout
+
+block content
+    .js
+        #preloader
+        img.w3-display.left(src='/images/newicon.png' style='height:60px;width:150px;margin-left:50px;position:absolute;')
+        nav
+        
+          ul 
+            
+            li
+              a(href='/') 
+
+                strong Home 
+            li
+              a(href='/items') 
+                strong Purchase
+            li
+              a(href='/items/add') 
+                strong Sell
+            
+        .button
+           a.btn-open(href='#')
+        
+          
+        .overlay
+          .wrap
+            ul.wrap-nav
+              li
+                a(href='/items/add') Sell an Item
+                ul
+                  li
+                    a(href='/') Home
+
+              li
+                a(href='#') Buy an Item
+                ul
+                  li
+                    a(href='/items/motors') Motors
+                  li
+                    a(href='/items/microcontrollers') Microcontrollers
+                  li
+                    a(href='/items/sensors') Sensors
+                  li
+                    a(href='/items/tools') Tools and Equipments
+                  li
+                    a(href='/items/ic') Integrated Circuits
+                  li
+                    a(href='/items/cboards') Circuit Boards
+                  li
+                    a(href='/items/electronic') Electronic Components
+                  li
+                    a(href='/items/electrical') Electrical Components
+                  li
+                    a(href='/items/kits') Kits and Module Cases
+                  li
+                    a(href='/items/projects') Projects
+                  li
+                    a(href='/items/others') Others
+                  li
+                    a(href='/items') -View All-
+            
+              li
+                if (user)
+                  a(href='/profile')  #{user.username}
+                else
+                  a(href='/auth/login') Join Us Now!
+                ul
+                  if (user)
+                      li
+                        
+                        a(href='/profile')
+                          .profile-card_header-imgbox
+                             img(src='#{user.photo}' style='height:100px;width:140px;')
+                      li
+                        a(href='/profile') View Profile
+                      li
+                        a(href='/auth/logout') Logout
+                  else
+                      li
+                        a(href='/auth/login') Login
+                      li
+                        a(href='/auth/register') Sign Up
+                  
+            .social
+              a(href='#')
+                .social-icon
+                  i.fa.fa-facebook
+              a(href='#')
+                .social-icon
+                  i.fa.fa-twitter
+              a(href='#')
+                .social-icon
+                  i.fa.fa-codepen
+              a(href='#')
+                .social-icon
+                  i.fa.fa-behance
+              a(href='#')
+                .social-icon
+                  i.fa.fa-dribbble
+              p
+                | © 2017 
+                br
+                |  Site: 
+                a(href='#') Github Code
+        .content
+            
+            form(method= 'post', action= '/items', onsubmit= 'getSearch()')
+                    .wrapsearch
+                          .search
+                            input#search.searchTerm(type='search', placeholder='What are you looking for?')
+                            label.searchButton(for='search')
+                              i.fa.fa-search
+                        //- .input-field
+                        //-   input#search(type='search', placeholder="Find a restaurant")
+                        //-   label(for= 'search')
+                        //-     i.fa.fa-search.small          
+            
+            section.w3-text-black
+              h1 All CPEexpress Items
+              h2#count.w3-large 
+              strong#findcount.w3-large 
+
+              #table-body.wrapper
+              //- .tbl-header
+              //-   table(cellpadding='0', cellspacing='0', border='0')
+              //-     thead
+              //-       tr
+              //-         th Photo
+              //-         th Item Name
+              //-         th Status
+              //-         th Category
+              //-         th Seller
+              //-         th Price
+              //- .tbl-content
+              //-   table(cellpadding='0', cellspacing='0', border='0')
+              //-     tbody#table-body
+
+            
