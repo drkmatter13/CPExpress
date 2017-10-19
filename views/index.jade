@@ -11,13 +11,13 @@ block content
             li
               a(href='/') 
 
-                strong Home	
+                strong About	
             li
               a(href='/items') 
-                strong Purchase
+                strong Items
             li
               a(href='/items/add') 
-                strong Sell
+                strong Post
             
         .button
            a.btn-open(href='#')
@@ -27,13 +27,13 @@ block content
           .wrap
             ul.wrap-nav
               li
-                a(href='/items/add') Sell an Item
+                a(href='/items/add') Post an Item
                 ul
                   li
-                    a(href='/') Home
+                    a(href='/') About
 
               li
-                a(href='#') Buy an Item
+                a(href='/items') Check the Items
                 ul
                   li
                     a(href='/items/motors') Motors
@@ -110,9 +110,49 @@ block content
                     h4 Welcome, #{user.username}!
                     h1.w3-xxxlarge.w3-animate-bottom Post your items and they will come.
                     .w3-padding-32
-                      button.w3-btn.w3-xlarge.w3-orange.w3-hover-red(onclick="document.getElementById('id01').style.display='block'", style='font-weight:900; border-radius: 15px;') Sell an Item
+                      button.w3-btn.w3-xlarge.w3-orange.w3-hover-red(onclick="document.getElementById('id01').style.display='block'", style='font-weight:900; border-radius: 15px;') Post an Item
                     .w3-center
-                      h2 CPExpress is an online web application <br>that allows you to post your items so customers<br> may see and begin a transaction with you.
+                      h3 
+                        p(style="text-align: justify;-moz-text-align-last: center;text-align-last: center; padding-left: 550px; padding-right: 550px;") CPExpress is an online web application that allows you to post your items so customers may see and begin a transaction with you.<br><br>
+
+                      h3
+                        p(style="text-align: justify;-moz-text-align-last: center;text-align-last: center; padding-left: 550px; padding-right: 550px; padding-bottom: 80px;") Explore the items available in the community posted by Engineering savvy members and checkout what's a great deal for you. <br><br>CPExpress is a posting application that is ideal for a certain community. You can showcase your items in the application. Add details about the product and your contact information and just let people in the community contact you if they are interested.<br><br>It is not limited to items and products. You can also post services here. The management is not responsible for any transaction made by the users.
+
+                      .jumbotron
+                        div(style='align: center;')
+                          h2
+                            p.text-center.space 
+                              h1 Our Team
+                        .row
+                          .col-sm-6
+                            figure
+                              img.rounded-circle(src='/images/gtar.jpg', alt='Marky', width='190px', height='200px')
+                            div
+                              h3 Mark Paulo A. Cube
+                              p
+                                span
+                                  | Developer 
+                                  a(target='_blank', href='https://www.facebook.com/markyangel13')
+                                    i.fa.fa-facebook-official(aria-hidden='true')
+                              p
+                                | I've always dreamed to be an astronaut and go to outer space.
+                                br
+                                | I am currently on my 5th year as a BS Computer Engineering student in Polytechnic University of the Philippines Manila.
+                          .col-sm-6(style='padding-bottom: 100px;')
+                            figure
+                              img.rounded-circle(src='/images/ben.png', alt='Benny', width='190px', height='200px')
+                            div
+                              h3 Benito S. Mascariñas Jr.
+                              p
+                                span
+                                  | Co-Developer 
+                                  a(target='_blank', href='https://www.facebook.com/bingboi.mascarinas')
+                                    i.fa.fa-facebook-official(aria-hidden='true')
+                              p
+                                | I love engineering especially electronics. I love to innovate and create new inventions that would help humanity. 
+                                br
+                                |  I am studying BSCPE in PUP Manila.
+
                 else 
                     h4 Welcome to CPExpress
                     h1.w3-xxxlarge.w3-animate-bottom Post your items and they will come.
@@ -123,7 +163,48 @@ block content
                         button.w3-btn.w3-xlarge.w3-orange.w3-hover-red(style='font-weight:900;margin: 10px; border-radius: 15px;') Register
 
                     .w3-center
-                      h2 CPExpress is an online web application <br>that allows you to post your items so customers<br> may see and begin a transaction with you.
+                      h3(style="text-align: justify;-moz-text-align-last: center;text-align-last: center;") 
+                        p(style="text-align: justify;-moz-text-align-last: center;text-align-last: center; padding-left: 550px; padding-right: 550px;") CPExpress is an online web application that allows you to post your items so customers may see and begin a transaction with you.<br><br>
+
+                      h3
+                        p(style="text-align: justify;-moz-text-align-last: center;text-align-last: center; padding-left: 550px; padding-right: 550px; padding-bottom: 80px;") Explore the items available in the community posted by Engineering savvy members and checkout what's a great deal for you. <br><br>CPExpress is a posting application that is ideal for a certain community. You can showcase your items in the application. Add details about the product and your contact information and just let people in the community contact you if they are interested.<br><br>It is not limited to items and products. You can also post services here. The management is not responsible for any transaction made by the users.
+
+                     .jumbotron
+                        div(style='align: center;')
+                          h2
+                            p.text-center.space 
+                              h1 Our Team
+                        .row
+                          .col-sm-6
+                            figure
+                              img.rounded-circle(src='/images/gtar.jpg', alt='Marky', width='190px', height='200px')
+                            div
+                              h3 Mark Paulo A. Cube
+                              p
+                                span
+                                  | Developer 
+                                  a(target='_blank', href='https://www.facebook.com/markyangel13')
+                                    i.fa.fa-facebook-official(aria-hidden='true')
+                              p
+                                | I've always dreamed to be an astronaut and go to outer space.
+                                br
+                                | I am currently on my 5th year as a BS Computer Engineering student in Polytechnic University of the Philippines Manila.
+                          .col-sm-6(style='padding-bottom: 100px;')
+                            figure
+                              img.rounded-circle(src='/images/ben.png', alt='Benny', width='190px', height='200px')
+                            div
+                              h3 Benito S. Mascariñas Jr.
+                              p
+                                span
+                                  | Co-Developer 
+                                  a(target='_blank', href='https://www.facebook.com/bingboi.mascarinas')
+                                    i.fa.fa-facebook-official(aria-hidden='true')
+                              p
+                                | I love engineering especially electronics. I love to innovate and create new inventions that would help humanity. 
+                                br
+                                |  I am studying BSCPE in PUP Manila.
+
+
 
             #id01.w3-modal
                   .w3-modal-content.w3-card-8.w3-animate-top
@@ -138,7 +219,7 @@ block content
                         | Go to your 
                         a.w3-btn(href='/profile') PROFILE
                         |  to check or proceed to 
-                        a.w3-btn(href='/items/add') SELL AN ITEM
+                        a.w3-btn(href='/items/add') POST AN ITEM
                     footer.w3-container.w3-theme-l1
                       p Thank you for your cooperation!
 
