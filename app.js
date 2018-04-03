@@ -20,7 +20,7 @@ var auth = require('./routes/auth');
 var items = require('./routes/items');
 
 
-var MongoURI = 'mongodb://127.0.0.1/dbase'
+var MongoURI = 'mongodb://admin:admin123@ds231739.mlab.com:31739/cpexpress'
 
 var app = express();
 

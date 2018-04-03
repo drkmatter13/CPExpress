@@ -11,6 +11,7 @@
   margin: auto;
   overflow: hidden;
   margin-bottom: 20px;
+  border-radius: 20px;
 }
 .product > div {
   position: relative;
